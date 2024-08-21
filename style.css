@@ -1,59 +1,132 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: bisque;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
-h1{
+
+h1 {
     background-color: black;
     color: aliceblue;
     height: 50px;
-   line-height: 50px; /* give same px as given in height so that it aligns vertically*/
+    line-height: 50px;
+    font-size: 5vw; /* Make font-size responsive */
 }
-.choice{
-    height: 160px;
-    width: 160px;  
+
+.choice {
+    height: 15vw;
+    width: 15vw;  
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: black;
 }
-img{
-    height: 150px;
-    width: 150px;
+
+img {
+    height: 90%;
+    width: 90%;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
-    gap: 50px;
-    
+    margin: 5vw;
+    gap: 5vw;
 }
-.score-board{
+
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    font-size: 30px;
-    font-weight:bold;
-    margin-bottom: 50px;
+    gap: 10vw;
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 5vw;
 }
-.msgBox{
+
+.msgBox {
     background-color: black;
     color: aliceblue;
-    width: 200px;
-    height: 50px;
-    display: inline;
-    padding: 10px;
+    width: 50vw;
+    height: 10vw;
+    display: inline-block;
+    padding: 2vw;
     border-radius: 10px;
-   
+    font-size: 4vw; /* Adjust font size to be responsive */
 }
-    
-    
+
+/* Media query for screens wider than 768px */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2vw;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .choices {
+        margin: 40px;
+        gap: 40px;
+    }
+
+    .score-board {
+        gap: 60px;
+        font-size: 30px;
+    }
+
+    .msgBox {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+/* Media query for screens wider than 1024px */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .choice {
+        height: 150px;
+        width: 150px;
+    }
+
+    img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .choices {
+        margin: 50px;
+        gap: 50px;
+    }
+
+    .score-board {
+        gap: 70px;
+        font-size: 32px;
+    }
+
+    .msgBox {
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+    }
+}
